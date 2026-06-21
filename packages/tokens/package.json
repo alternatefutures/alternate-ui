@@ -1,0 +1,44 @@
+{
+  "name": "@alternatefutures/tokens",
+  "version": "0.0.0",
+  "description": "AlternateFutures design tokens — Tailwind v4 @theme CSS variables (oklch brand system, brand accent #A5B2FF) + framework-agnostic JS color helpers. The single source of truth for the brand.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./tokens.css": "./tokens.css",
+    "./theme.css": "./theme.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "tokens.css",
+    "theme.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alternatefutures/alternate-ui.git",
+    "directory": "packages/tokens"
+  }
+}

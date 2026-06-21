@@ -1,0 +1,93 @@
+/*
+ * @alternatefutures/tokens — design tokens (Tailwind v4 CSS-first @theme).
+ *
+ * The single source of truth for the AlternateFutures brand: the oklch dark
+ * terminal color system, radius scale, and brand accent (#A5B2FF, exposed as the
+ * `term` tokens). These are VALUES only — no layout, no global side effects.
+ *
+ * Import AFTER Tailwind in your app's global stylesheet:
+ *     @import "tailwindcss";
+ *     @import "@alternatefutures/tokens/tokens.css";
+ *
+ * For the full brand chrome (monospace body font + ambient glow/CRT + brand
+ * scrollbar), import "@alternatefutures/tokens/theme.css" instead — it re-exports
+ * these tokens and adds the opinionated base layer.
+ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Dark terminal theme. Accent = brand #A5B2FF. :root and .dark are identical
+ * (the brand is dark-only today); keep both so `dark:` utilities resolve. */
+:root,
+.dark {
+  --background: oklch(0.13 0.014 274);
+  --foreground: oklch(0.9 0.02 274);
+
+  --card: oklch(0.16 0.016 274);
+  --card-foreground: oklch(0.92 0.02 274);
+
+  --popover: oklch(0.16 0.016 274);
+  --popover-foreground: oklch(0.92 0.02 274);
+
+  /* primary == the accent so shadcn primary surfaces render brand blue */
+  --primary: oklch(0.78 0.1 278);
+  --primary-foreground: oklch(0.16 0.02 274);
+
+  /* Terminal accent tokens (brand #A5B2FF) — promoted to named color tokens. */
+  --term: #a5b2ff;
+  --term-dim: #828dd6;
+  --term-faint: #39406b;
+
+  --secondary: oklch(0.27 0.014 285);
+  --secondary-foreground: oklch(0.97 0.004 285);
+
+  --muted: oklch(0.27 0.014 285);
+  --muted-foreground: oklch(0.7 0.012 285);
+
+  --accent: oklch(0.3 0.02 285);
+  --accent-foreground: oklch(0.98 0.003 285);
+
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.98 0.003 285);
+
+  --success: oklch(0.7 0.16 155);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.62 0.19 280);
+
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand accent as first-class Tailwind colors: bg-term, text-term-dim, … */
+  --color-term: var(--term);
+  --color-term-dim: var(--term-dim);
+  --color-term-faint: var(--term-faint);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}

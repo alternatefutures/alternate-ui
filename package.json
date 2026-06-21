@@ -1,0 +1,31 @@
+{
+  "name": "@alternatefutures/ui-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AlternateFutures design system — layered, independently-versioned packages (tokens → ui → product kits) published to the @alternatefutures/* npm scope.",
+  "license": "AGPL-3.0-only",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.18.2"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "changeset": "changeset",
+    "changeset:version": "changeset version && npm install --package-lock-only",
+    "changeset:publish": "npm run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@types/node": "^22.10.7",
+    "tsup": "^8.3.5",
+    "typescript": "~5.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alternatefutures/alternate-ui.git"
+  }
+}
