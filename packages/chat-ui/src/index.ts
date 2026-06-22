@@ -1,0 +1,8 @@
+export * from './types'
+export { ChatView, type ChatViewProps } from './chat-view'
+export { PassphraseLogin, type PassphraseLoginProps } from './passphrase-login'
+export { ChatMessageList } from './chat-message-list'
+export { ChatInput } from './chat-input'
+export { ChatAvatar } from './chat-avatar'
+export { TypingIndicator } from './typing-indicator'
+export { AVATAR_COLORS, seedColor, initials, makeColorOf } from './colors'
