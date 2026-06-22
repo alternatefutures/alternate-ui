@@ -6,7 +6,9 @@
   "description": "AlternateFutures design system — layered, independently-versioned packages (tokens → ui → product kits) published to the @alternatefutures/* npm scope.",
   "license": "AGPL-3.0-only",
   "workspaces": [
-    "packages/*"
+    "packages/tokens",
+    "packages/ui",
+    "packages/chat-ui"
   ],
   "engines": {
     "node": ">=18.18.2"
