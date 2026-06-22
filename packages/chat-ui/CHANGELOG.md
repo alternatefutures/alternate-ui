@@ -1,4 +1,4 @@
-# @alternatefutures/tokens
+# @alternatefutures/chat-ui
 
 ## 0.2.0
 
@@ -10,12 +10,8 @@
   - **ui** — brand primitives (Button, Input, Card, Avatar, Badge, Label, Divider), `FlameBackground` (animated flame canvas + spark channel), and `SecurityBadge` (the "ENCRYPTED · How?" indicator + security-layers popup).
   - **chat-ui** — `ChatView` (E2EE chat: grouped messages, replies, edit/delete, mentions, search, members, typing; `hideHeader` option) and `PassphraseLogin` (word-grid passphrase + optional name step; `header`/`intro`/`notice` slots).
 
-## 0.1.0
+### Patch Changes
 
-### Minor Changes
-
-- 33b3092: Initial release. Tailwind v4 CSS-first `@theme` design tokens (oklch brand color
-  system, radius scale, brand accent `#A5B2FF` promoted to named `term` tokens), a
-  full brand-chrome stylesheet (`theme.css`: monospace body font, ambient glow + CRT
-  scanline, brand scrollbar), and framework-agnostic JS color helpers (`BRAND`,
-  `AVATAR_COLORS`, `seedColor`).
+- Updated dependencies [e6f1673]
+  - @alternatefutures/tokens@0.2.0
+  - @alternatefutures/ui@0.2.0

@@ -1,6 +1,6 @@
 {
   "name": "@alternatefutures/chat-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AlternateFutures shared chat UI — presentation-only ChatView (message list, composer, members, search, typing) with injected transport + renderBody. No crypto, no transport. Built on @alternatefutures/ui + tokens.",
   "license": "AGPL-3.0-only",
   "type": "module",
@@ -27,8 +27,8 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@alternatefutures/tokens": "^0.1.0",
-    "@alternatefutures/ui": "^0.1.0"
+    "@alternatefutures/tokens": "^0.2.0",
+    "@alternatefutures/ui": "^0.2.0"
   },
   "peerDependencies": {
     "lucide-react": ">=0.400.0",

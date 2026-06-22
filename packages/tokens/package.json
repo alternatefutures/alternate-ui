@@ -1,6 +1,6 @@
 {
   "name": "@alternatefutures/tokens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AlternateFutures design tokens — Tailwind v4 @theme CSS variables (oklch brand system, brand accent #A5B2FF) + framework-agnostic JS color helpers. The single source of truth for the brand.",
   "license": "AGPL-3.0-only",
   "type": "module",
