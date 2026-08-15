@@ -825,10 +825,10 @@ export function ChatView({
       </div>
 
       {/* ── composer ── */}
-      <div
-        className="mx-auto w-full max-w-3xl px-3 pb-3 pt-1 sm:px-4"
-        style={{ paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))' }}
-      >
+      {/* Bottom padding tracks the side padding at each breakpoint so the
+          composer sits in an evenly inset box; the max() keeps the mobile
+          safe-area floor that the old inline style provided. */}
+      <div className="mx-auto w-full max-w-3xl px-3 pt-1 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-4 sm:pb-[max(1rem,env(safe-area-inset-bottom))]">
         {/* reply context bar */}
         {replyingTo && (
           <div className="flex items-center gap-2 rounded-t border border-b-0 border-[#a5b2ff40] bg-[#0a0c14]/85 px-3 py-1.5 text-[12px] backdrop-blur-sm">
