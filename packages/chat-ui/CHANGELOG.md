@@ -1,5 +1,11 @@
 # @alternatefutures/chat-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- Add optional `composerPlaceholder` prop to `ChatView`. When provided it overrides the default `Message #<roomLabel>` composer placeholder — for host apps that already name the room in their own chrome (e.g. the web-app's project chat panel). Omitted → behavior unchanged.
+
 ## 0.2.0
 
 ### Minor Changes

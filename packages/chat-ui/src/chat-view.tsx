@@ -290,6 +290,9 @@ export interface ChatViewProps {
   /** Hide the built-in header bar (room label, search, members, leave) so the host
    *  app can supply its own chrome — e.g. connect's meeting panel. Default false. */
   hideHeader?: boolean
+  /** Override the composer placeholder (default `Message #<roomLabel>`) — e.g. when
+   *  the host app already names the room in its own chrome. */
+  composerPlaceholder?: string
 }
 
 export function ChatView({
@@ -310,6 +313,7 @@ export function ChatView({
   onTypingChange,
   onCaretSpark,
   hideHeader = false,
+  composerPlaceholder,
 }: ChatViewProps) {
   const [draft, setDraft] = React.useState('')
   const [showMembers, setShowMembers] = React.useState(false)
@@ -908,7 +912,7 @@ export function ChatView({
             }}
             onClick={(e) => updateMention(e.currentTarget)}
             onKeyDown={onKeyDown}
-            placeholder={`Message #${slug}`}
+            placeholder={composerPlaceholder ?? `Message #${slug}`}
             aria-label="Message"
             className="text-[13px] text-foreground placeholder:text-white/40"
           />
