@@ -1,5 +1,11 @@
 # @alternatefutures/chat-ui
 
+## 0.3.1
+
+### Patch Changes
+
+- 62f9770: Message rows no longer run wider than the composer: the message column carries the same `px-3 sm:px-4` inset as the header and the composer, so a row's hover and reply highlight end where the input box ends.
+
 ## 0.3.0
 
 ### Minor Changes
