@@ -86,7 +86,7 @@ export function ChatMessageList({
         )}
         {...props}
       >
-        <div className="mx-auto mt-auto flex w-full max-w-3xl flex-col">{children}</div>
+        <div className="mx-auto mt-auto flex w-full max-w-3xl flex-col px-3 sm:px-4">{children}</div>
       </div>
       {(!atBottom || newCount > 0) && (
         <button
